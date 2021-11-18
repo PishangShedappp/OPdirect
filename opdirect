@@ -1,0 +1,118 @@
+#!/bin/bash
+#OPdirect - Version 1.0
+#Coded by PishangShedappp
+
+#>Variables
+version="opdirect v1.0"
+versionNum=1
+domain=
+repoVerNum=
+output=
+bold="\e[1m"
+red="\e[31m"
+normal="\e[0m"
+yellow="\e[1;33m"
+
+#> Usage
+printUsage(){
+	echo -e " "
+	echo -e "${bold}${red}[OPdirect]${normal} by ${bold}PishangShedappp${normal}"
+	echo -e " "
+	echo -e "Example Usage :"
+	echo -e "    opdirect -d [target domain]"
+	echo -e " "
+	echo -e "Flags:"
+	echo -e "    -d, --domain	Add your target domain (e.g -d target.com)"
+	echo -e "    -v, --version	Get your current version of OPdirect"
+	echo -e "    -u, --update	Update OPdirect to new version if available"
+	echo -e "    -h, --help		To view flags and usage"
+	exit 0
+}
+
+#> Update tools
+updateFunc(){
+	echo -e "Current version is ${version}"
+	echo -e " "
+	echo -e "Searching the latest version of OPdirect....."
+	repoVerNum=$(curl -sL https://api.github.com/repos/PishangShedappp/HTcode-Python/releases/latest | jq -r ".tag_name")
+
+	if [ $versionNum -eq $repoVerNum ]
+	then
+		echo -e " "
+		echo -e "${bold}You already have the latest version of OPdirect${normal}"
+	else
+		echo -e " "
+		echo -e "${yellow}You have an outdated version of OPdirect. Updating...${normal}"
+		wget https://raw.githubusercontent.com/PishangShedappp/OPdirect/main/opdirect && chmod +x opdirect && sudo mv opdirect /usr/bin/
+		echo -e " "
+		echo -e "${yellow}DONE${normal}"
+	fi
+
+}
+
+#> Banner
+banner(){
+    clear
+    echo -e "${yellow}█▀█ █▀█ █▀▄ █ █▀█ █▀▀  ▄▀▀ ▀▀█▀▀"
+    echo -e "█ █ █▄█ █ █ █ █▄▀ █▄▄ █      █"
+    echo -e "█▄█ █   █▄▀ █ █ █ █▄▄  ▀▄▄   █     v1.0 ${normal}"
+    echo -e " "
+    sleep 1s
+}
+
+#> Argument flags
+while [ -n "$1" ]; do
+    case $1 in
+        -h|--help)
+	    	printUsage
+	    	shift ;;
+
+		-v|--version)
+			echo -e "$version"
+			exit 0 ;;
+
+		-d|--domain)
+			domain=$2
+			shift ;;
+
+		-s|--site)
+			malsite=$2
+			shift ;;
+
+		-u|--update)
+			banner
+			updateFunc
+			exit 0 ;;
+
+    esac
+    shift
+done
+
+#> Initial Config
+if [ -z "$domain" ]; 
+    then
+	echo -e "\n${red}Error${normal} - Please enter flags.\n${normal}"
+	printUsage
+fi
+
+#> Target info
+targetFunc(){
+	echo -e "${bold}Time: $(date)   Target: $domain ${normal}"
+	echo -e " "
+	sleep 1s
+}
+
+#> WayBackUrls function
+wbuFunc(){
+    waybackurls $domain | grep -a -i \=http | qsreplace 'http://evil.com' | while read host do;do curl -s -L $host -I | grep "evil.com" && echo -e "${red}Vulnerable:${normal} $host\n" ;done
+}
+
+#> Main function
+while true
+do
+	clearFunc
+	banner
+	targetFunc
+	wbuFunc
+	exit 0
+done
