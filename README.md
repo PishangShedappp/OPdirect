@@ -1,5 +1,6 @@
 # OPdirect
 
+<a href="https://Ko-fi.com/pishangshedappp"><img src=""></a>
 <a href="https://twitter.com/ahazriq7872"><img src="https://i.imgur.com/qEGidBc.png" width="5%" height="5%"/></a>
 
 OPdirect is a tool to automate open redirect from a website. This tool helps bug bounty hunter and penetration tester to get open redirect vulnerability for the domain they are targeting. OPdirect use some other tool like [waybackurls](https://github.com/tomnomnom/waybackurls) and other linux command.
