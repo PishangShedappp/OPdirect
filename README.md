@@ -8,7 +8,14 @@ OPdirect is a tool to automate open redirect from a website. This tool helps bug
 ![OPdirect](https://raw.githubusercontent.com/PishangShedappp/OPdirect/main/img/OPdirect.png)
 
 # Installation
-Not Yet
+```
+git clone https://github.com/PishangShedappp/OPdirect.git
+cd OPdirect
+chmod +x install.sh && chmod +x opdirect
+sudo ./install.sh
+```
+
+Then you can access opdirect globally
 
 # Usage
 Short Form    | Long Form     | Description
@@ -19,4 +26,19 @@ Short Form    | Long Form     | Description
 -h            | --help        | To view flags and usage
 
 # Examples
-Not Yet
+- Basic usage
+```
+opdirect -d target.com
+```
+- To get your current version of OPdirect
+```
+opdirect -v
+```
+- To update your opdirect to the latest version
+```
+opdirect -u
+```
+- To view help message
+```
+opdirect -h
+```
