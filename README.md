@@ -1,3 +1,4 @@
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![Twitter Follow](https://img.shields.io/twitter/follow/ahazriq7872?color=green&style=for-the-badge)
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=PishangShedappp/OPdirect)
