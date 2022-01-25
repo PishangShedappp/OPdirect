@@ -1,4 +1,5 @@
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=PishangShedappp/OPdirect)
+![](https://komarev.com/ghpvc/?username=PishangShedappp&color=brightgreen)
 
 # OPdirect
 
