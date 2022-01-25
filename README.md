@@ -1,4 +1,4 @@
-![Twitter Follow](https://img.shields.io/twitter/follow/ahazriq7872?color=green&style=for-the-badge)
+![Twitter Follow](https://img.shields.io/twitter/follow/twitter?color=green&style=plastic)
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=PishangShedappp/OPdirect)
 
