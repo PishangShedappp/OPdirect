@@ -1,3 +1,5 @@
+![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=PishangShedappp&theme=blue-green)
+
 # OPdirect
 
 <a href="https://Ko-fi.com/pishangshedappp"><img align="right" src="https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5cbed8a433a3f45a772abaf5_SupportMe_blue.png" width="30%" height="30%"/></a>
