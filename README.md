@@ -1,4 +1,4 @@
-![Your Repository's Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=PishangShedappp&theme=blue-green)
+![GitHub Contributors Image](https://contrib.rocks/image?repo=PishangShedappp/OPdirect)
 
 # OPdirect
 
