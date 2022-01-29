@@ -27,12 +27,13 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
 echo 'export GOPATH=$HOME/go'	>> ~/.bashrc			
-echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc	
+echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/go/bin'
 source ~/.bashrc
 #> Move to bin
 sudo cp opdirect /usr/bin
 #> WayBackUrls
 echo -e "${yellow}Installing waybackurls...${normal}"
-go get github.com/tomnomnom/waybackurls
+go install github.com/tomnomnom/waybackurls@latest
 echo -e " "
 echo -e "${yellow}Thanks for downloading this tool. If you found open redirect vuln with OPdirect tag me in twitter(link at github OPdirect repo).${normal}"
