@@ -24,16 +24,17 @@ wget "https://golang.org/dl/go1.17.3.linux-amd64.tar.gz" 2> /dev/null &> /dev/nu
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.3.linux-amd64.tar.gz 2> /dev/null &> /dev/null
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH:$HOME/go/bin
 echo 'export GOROOT=/usr/local/go' >> ~/.bashrc
 echo 'export GOPATH=$HOME/go'	>> ~/.bashrc			
-echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >> ~/.bashrc
-echo 'export PATH=$PATH:$HOME/go/bin'
+echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH:$HOME/go/bin' >> ~/.bashrc
 source ~/.bashrc
 #> Move to bin
 sudo cp opdirect /usr/bin
 #> WayBackUrls
 echo -e "${yellow}Installing waybackurls...${normal}"
 go install github.com/tomnomnom/waybackurls@latest
+echo -e "${yellow}Installing qsreplace...${normal}"
+go install github.com/tomnomnom/qsreplace@latest
 echo -e " "
 echo -e "${yellow}Thanks for downloading this tool. If you found open redirect vuln with OPdirect tag me in twitter(link at github OPdirect repo).${normal}"
