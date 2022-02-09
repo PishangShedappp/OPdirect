@@ -20,7 +20,7 @@ OPdirect is a tool to automate open redirect from a website. This tool helps bug
 ```
 git clone https://github.com/PishangShedappp/OPdirect.git
 cd OPdirect
-chmod +x install.sh && chmod +x opdirect
+sudo chmod +x install.sh && chmod +x opdirect
 sudo ./install.sh
 ```
 
