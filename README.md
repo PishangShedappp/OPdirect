@@ -16,7 +16,7 @@ OPdirect is a tool to automate open redirect from a website. This tool helps bug
 ![OPdirect](https://raw.githubusercontent.com/PishangShedappp/OPdirect/main/img/OPdirect.png)
 
 # Installation
-[golang](https://go.dev/dl/) Please download golang first.
+[golang](https://go.dev/dl/) Please download and install golang first.
 ```
 git clone https://github.com/PishangShedappp/OPdirect.git
 cd OPdirect
