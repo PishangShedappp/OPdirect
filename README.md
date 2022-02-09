@@ -24,7 +24,10 @@ sudo chmod +x install.sh && chmod +x opdirect
 sudo ./install.sh
 ```
 
+
 Then you can access opdirect globally
+
+If you can't access it globally try this `sudo cp opdirect /usr/bin`
 
 # Usage
 Short Form    | Long Form     | Description
